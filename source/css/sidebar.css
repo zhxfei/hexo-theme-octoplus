@@ -1,0 +1,304 @@
+@font-face {font-family: "iconfont";
+  src: url('./fonts/iconfont.eot'); /* IE9*/
+  src: url('./fonts/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('./fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconfont' !important;
+  speak: none;
+  font-size:16px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.profile-card{
+  height: 300px;
+  position: relative;
+  /* font-family: "Alegreya Sans", "Yanone Kaffeesatz", 冬青黑体简体中文, "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Heiti, 黑体, arial, serif; */
+}
+
+.profile-backgroud{
+  height: 100px;
+  background: #4d4d4d;
+}
+
+.profile-avatar{
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 300px;
+    width: 128px;
+    height: 128px;
+    margin: 30px auto 0;
+    position: relative;
+    overflow: hidden;
+    background: #88acdb;
+    text-align: center;
+}
+
+.profile-description{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  font-style: bold;
+}
+
+.img_wrapper {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.social a {
+    border-radius:50%;
+    display:-moz-inline-stack;
+    display:inline-block;
+    vertical-align:middle;
+    *vertical-align:auto;
+    zoom:1;
+    *display:inline;
+    margin:0 8px 15px 8px;
+    transition:0.3s;
+    text-align: center;
+    opacity: 0.7;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    text-decoration:none;
+}
+
+.social {
+    margin-top: 10px;
+
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a.weibo {
+    background: #aaaaff;
+    border:1px solid #aaaaff;
+    &:hover {
+        border:1px solid #aaaaff;
+    }
+}
+a.segmentfault {
+    background: #009a61;
+    border:1px solid #009a61;
+    &:hover {
+        border:1px solid #009a61;
+    }
+}
+a.rss {
+    background: #ef7522;
+    border:1px solid #ef7522;
+    &:hover {
+        border:1px solid #cf5d0f;
+    }
+}
+a.github {
+    background: #afb6ca;
+    border:1px solid #afb6ca;
+    &:hover {
+        border:1px solid #909ab6;
+    }
+}
+a.facebook {
+    background: #3b5998;
+    border:1px solid #3b5998;
+    &:hover {
+        border:1px solid #2d4373;
+    }
+}
+a.google {
+    background: #c83d20;
+    border:1px solid #c83d20;
+    &:hover {
+        border:1px solid #9c3019;
+    }
+}
+a.twitter {
+    background: #55cff8;
+    border:1px solid #55cff8;
+    &:hover {
+        border:1px solid #24c1f6;
+    }
+}
+a.linkedin {
+    background: #005a87;
+    border:1px solid #005a87;
+    &:hover {
+        border:1px solid #006b98;
+    }
+}
+a.acfun {
+    background: #fd4c5d;
+    border:1px solid #fd4c5d;
+    &:hover {
+        border:1px solid #fd4c5d;
+    }
+}
+a.bilibili {
+    background: #e15280;
+    border:1px solid #e15280;
+    &:hover {
+        border:1px solid #e15280;
+    }
+}
+a.zhihu {
+    background: #0078d8;
+    border:1px solid #0078d8;
+    &:hover {
+        border:1px solid #0078d8;
+    }
+}
+a.douban {
+    background: #06c611;
+    border:1px solid #06c611;
+    &:hover {
+        border:1px solid #06c611;
+    }
+}
+a.mail {
+    background: #005a87;
+    border:1px solid #005a87;
+    &:hover {
+        border:1px solid #006b98;
+    }
+}
+a.jianshu {
+    background: #ff5722;
+    border:1px solid #ff5722;
+    &:hover {
+        border:1px solid #ff5722;
+    }
+}
+a.weixin {
+    background: #4caf50;
+    border:1px solid #4caf50;
+    &:hover {
+        border:1px solid #4caf50;
+    }
+}
+a.qq {
+    background: #34baad;
+    border:1px solid #34baad;
+    &:hover {
+        border:1px solid #34baad;
+    }
+}
+a.psn {
+    background: #086ef6;
+    border:1px solid #086ef6;
+    &:hover {
+        border:1px solid #086ef6;
+    }
+}
+.icon-twitter:before { content: "\e600"; }
+
+.icon-facebook:before { content: "\e601"; }
+
+.icon-clock:before { content: "\e602"; }
+
+.icon-mail:before { content: "\e609"; }
+
+.icon-link:before { content: "\e6ab"; }
+
+.icon-search:before { content: "\e65b"; }
+
+.icon-smile:before { content: "\e64a"; }
+
+.icon-roundrightfill:before { content: "\e65a"; }
+
+.icon-list:before { content: "\e682"; }
+
+.icon-book:before { content: "\e6fe"; }
+
+.icon-home:before { content: "\e6bb"; }
+
+.icon-share:before { content: "\e618"; }
+
+.icon-back:before { content: "\e625"; }
+
+.icon-qq:before { content: "\e62d"; }
+
+.icon-weibo:before { content: "\e619"; }
+
+.icon-segmentfault:before { content: "\e603"; }
+
+.icon-sort:before { content: "\e700"; }
+
+.icon-jianshu:before { content: "\e613"; }
+
+.icon-circle-left:before { content: "\e71f"; }
+
+.icon-circle-right:before { content: "\e720"; }
+
+.icon-loading:before { content: "\e614"; }
+
+.icon-acfun:before { content: "\e604"; }
+
+.icon-close:before { content: "\e60c"; }
+
+.icon-tumblr:before { content: "\e6b0"; }
+
+.icon-calendar:before { content: "\e667"; }
+
+.icon-rss:before { content: "\e877"; }
+
+.icon-price-tags:before { content: "\e6f9"; }
+
+.icon-quo-left:before { content: "\e7f5"; }
+
+.icon-quo-right:before { content: "\e7f6"; }
+
+.icon-back1:before { content: "\e64e"; }
+
+.icon-github:before { content: "\e735"; }
+
+.icon-film:before { content: "\e7b7"; }
+
+.icon-weixin:before { content: "\e61f"; }
+
+.icon-qzone:before { content: "\e680"; }
+
+.icon-category:before { content: "\e605"; }
+
+.icon-douban:before { content: "\e64c"; }
+
+.icon-roundleftfill:before { content: "\e799"; }
+
+.icon-tuding:before { content: "\e651"; }
+
+.icon-zhihu:before { content: "\e61b"; }
+
+.icon-linkedin:before { content: "\e6d4"; }
+
+.icon-google:before { content: "\e635"; }
+
+.icon-plane:before { content: "\e62f"; }
+
+.icon-bilibili:before { content: "\e622"; }
+
+.icon-psn:before { content: "\e6c7"; }
+
+.profile-hr-dotted{
+  border: 0;
+  padding: 3px;
+  background: linear-gradient(135deg, red, orange,green, blue, purple);
+  --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);}

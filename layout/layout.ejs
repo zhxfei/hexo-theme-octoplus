@@ -68,30 +68,28 @@ var thisYear = new Date().getFullYear();
 
 </head>
 <body>
+  <%- partial('partials/header') %>
 
-<%- partial('partials/header') %>
+  <%- partial('partials/navigation') %>
 
-<%- partial('partials/navigation') %>
+  <div id="main">
+      <div id="content">
+          <%- body %>
+      </div>
+  </div>
 
-<div id="main">
-    <div id="content">
-        <%- body %>
-    </div>
-</div>
+  <footer role="contentinfo">
+      <p>
+          Copyright © <%= thisYear %> - <%= config.author %> -
+          <span class="credit">Generated using <a href="https://github.com/jbreckmckye/hexo-theme-octo">Octo theme</a> for <a href="http://hexo.io">Hexo</a></span>
+      </p>
+  </footer>
 
-<footer role="contentinfo">
-    <p>
-        Copyright © <%= thisYear %> - <%= config.author %> -
-        <span class="credit">Generated using <a href="https://github.com/jbreckmckye/hexo-theme-octo">Octo theme</a> for <a href="http://hexo.io">Hexo</a></span>
-    </p>
-</footer>
-
-<% if (theme.scripts && theme.scripts.length) { %>
-    <!-- scripts list from theme config.yml -->
-    <% theme.scripts.forEach(function(url) { %>
-        <script src="<%= url %>"></script>
-    <% }); %>
-<% } %>
-
+  <% if (theme.scripts && theme.scripts.length) { %>
+      <!-- scripts list from theme config.yml -->
+      <% theme.scripts.forEach(function(url) { %>
+          <script src="<%= url %>"></script>
+      <% }); %>
+  <% } %>
 </body>
 </html>

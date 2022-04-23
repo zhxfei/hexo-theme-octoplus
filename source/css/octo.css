@@ -6,7 +6,9 @@
     font-size: 100%;
     vertical-align: baseline
 }
-
+body{
+  background-color: #CFCFCF;
+}
 html {
     line-height: 1
 }
@@ -63,31 +65,8 @@ a:active {
     color: #01579f
 }
 
-aside.sidebar a {
-    color: #222
-}
-
-aside.sidebar a:focus {
-    color: #0181eb
-}
-
-aside.sidebar a:hover {
-    color: #0181eb
-}
-
-aside.sidebar a:active {
-    color: #01579f
-}
-
-a {
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s
-}
-
 html {
-    background: #252525 url('/images/line-tile.png?1416136272') top left
+    background: #252525 url('/images/oriental-tiles.png?1416136272') top left
 }
 
 body > div {
@@ -703,7 +682,7 @@ body.sidebar-footer .toggle-sidebar {
 }
 
 body > header {
-    background: #333
+    background: url('/images/xinkong.jpeg?1416136272') top left
 }
 
 body > header h1 {
@@ -2149,4 +2128,13 @@ body > footer p:last-child {
 
 .ad-unit {
     display: none;
+}
+
+
+.img_wrapper {
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
 }

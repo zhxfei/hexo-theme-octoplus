@@ -1,8 +1,10 @@
 <header role="banner">
     <hgroup>
-        <h1><a href="<%- url_for() %>"><%= config.title %></a></h1>
-        <% if (theme.subtitle){ %>
-            <h2><%= theme.subtitle %></h2>
-        <% } %>
+        <div class="">
+          <h1><a href="<%- url_for() %>"><%= config.title %></a></h1>
+          <% if (theme.sign){ %>
+              <h2 style="font-style:italic; text-align: right; font-size: 20px"><%= theme.sign %></h2>
+          <% } %>
+        </div>
     </hgroup>
 </header>
