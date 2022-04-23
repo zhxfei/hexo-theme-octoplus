@@ -43,7 +43,6 @@
     margin: 30px auto 0;
     position: relative;
     overflow: hidden;
-    background: #88acdb;
     text-align: center;
 }
 
@@ -81,7 +80,7 @@
 
 .social {
     margin-top: 10px;
-
+    color: white;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -297,8 +296,68 @@ a.psn {
 
 .profile-hr-dotted{
   border: 0;
-  padding: 3px;
+  padding: 1px;
   background: linear-gradient(135deg, red, orange,green, blue, purple);
   --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);}
+
+
+
+.tag_cloud{
+  margin-top: 10px;
+}
+
+.tag_cloud-title {
+  text-align: center;
+  font-size: 15px;
+}
+
+.tag_cloud-tags {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Gill Sans", sans-serif;
+  a {
+    text-decoration: none;
+  }
+}
+
+.tag_cloud_tags_a{
+  margin: 2px;
+}
+
+.post-summary {
+  margin-top: 10px;
+  background-color: inherit;
+  font-family: "Gill Sans", sans-serif;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.post-summary-header{
+  text-align: center;
+  font-size: 15px;
+}
+
+.post-summary-content{
+    font-size: 16px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+
+aside.sidebar ul {
+    margin-bottom: 0.5em;
+    margin-left: 10px;
+}
+
+aside.sidebar li {
+    list-style: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+aside.sidebar li p:last-child {
+    margin-bottom: 0
+}

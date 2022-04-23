@@ -1877,7 +1877,7 @@ figure.code .highlight {
     display: inline
 }
 
-.side-shadow-border, aside.sidebar section h1, aside.sidebar li {
+.side-shadow-border, aside.sidebar section h1 {
     -webkit-box-shadow: #fff 0 1px;
     -moz-box-shadow: #fff 0 1px;
     box-shadow: #fff 0 1px
@@ -1886,7 +1886,6 @@ figure.code .highlight {
 aside.sidebar {
     overflow: hidden;
     color: #4b4b4b;
-    text-shadow: #fff 0 1px
 }
 
 aside.sidebar section {
@@ -1905,36 +1904,7 @@ aside.sidebar section h1 + p {
     padding-top: .4em
 }
 
-aside.sidebar img {
-    -webkit-border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    -ms-border-radius: 0.3em;
-    -o-border-radius: 0.3em;
-    border-radius: 0.3em;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: #fff 0.3em solid
-}
 
-aside.sidebar ul {
-    margin-bottom: 0.5em;
-    margin-left: 0
-}
-
-aside.sidebar li {
-    list-style: none;
-    padding: .5em 0;
-    margin: 0;
-    border-bottom: 1px solid #e0e0e0
-}
-
-aside.sidebar li p:last-child {
-    margin-bottom: 0
-}
 
 aside.sidebar a {
     color: inherit;
@@ -1942,10 +1912,6 @@ aside.sidebar a {
     -moz-transition: color 0.5s;
     -o-transition: color 0.5s;
     transition: color 0.5s
-}
-
-aside.sidebar:hover a {
-    color: #222
 }
 
 aside.sidebar:hover a:hover {

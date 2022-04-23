@@ -3,14 +3,13 @@
 
   <%- css('css/sidebar') %>
 
-  <% if (is_home()) { %>
-    <h2>home</h2>
+  <% if (is_home() || is_tag() || is_archive()) { %>
+    <%-partial('partials/tag_cloud', {cur_tags: site.tags})%>
   <% } else if (is_post()) { %>
+    <%-partial('partials/tag_cloud', {cur_tags: page.tags})%>
 
-  <h2>post</h2>
+    <%-partial('partials/sidebar-post-summary')%>
 
-  <% } else if (is_archive()) { %>
-    <h2>archive</h2>
 
   <% } else if (is_category()) { %>
     <h2>category</h2>
