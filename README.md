@@ -1,4 +1,4 @@
-# hexo-theme-octo
+# hexo-theme-octoplus
 
 ![Screenshot](/screen_cut.png)
 
