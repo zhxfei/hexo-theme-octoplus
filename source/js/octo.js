@@ -19,22 +19,13 @@ function addSidebarToggler() {
             e.preventDefault();
             if ($('body').hasClass('collapse-sidebar')) {
                 $('body').removeClass('collapse-sidebar');
+                $('aside').css({"display":"inherit"});
             } else {
                 $('body').addClass('collapse-sidebar');
+                $('aside').css({"display":"none"});
             }
         });
     }
-    var sections = $('aside.sidebar > section');
-    if (sections.length > 1) {
-        sections.each(function(index, section){
-            if ((sections.length >= 3) && index % 3 === 0) {
-                $(section).addClass("first");
-            }
-            var count = ((index +1) % 2) ? "odd" : "even";
-            $(section).addClass(count);
-        });
-    }
-    if (sections.length >= 3){ $('aside.sidebar').addClass('thirds'); }
 }
 
 function testFeatures() {
@@ -109,6 +100,27 @@ function renderDeliciousLinks(items) {
     $('#delicious').html(output);
 }
 
+function autoFixContent(){
+        //获取要定位元素距离浏览器顶部的距离
+    if ($(".post-summary").offset() === undefined){
+      return
+    }
+    var navH = $(".post-summary").offset().top;
+    // console.log(navH);
+    //滚动条事件
+    $(window).scroll(function(){
+        //获取滚动条的滑动距离
+        var scroH = $(this).scrollTop();
+        // console.log(scroH);
+        //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+        if(scroH>=navH){
+            $(".post-summary").css({"position":"fixed"});
+        }else if(scroH<navH){
+            $(".post-summary").css({"position":"static"});
+        }
+     })
+}
+
 $('document').ready(function() {
     testFeatures();
     wrapFlashVideos();
@@ -116,7 +128,12 @@ $('document').ready(function() {
     addCodeLineNumbers();
     getNav();
     addSidebarToggler();
+    autoFixContent();
 });
+
+
+
+
 
 // iOS scaling bug fix
 // Rewritten version
@@ -162,4 +179,3 @@ var swfobject=function(){function s(a,b,d){var q,k=n(d);if(g.wk&&g.wk<312)return
         10),e[1]=parseInt(c.replace(/^.*\.(.*)\s.*$/,"$1"),10),e[2]=/[a-zA-Z]/.test(c)?parseInt(c.replace(/^.*[a-zA-Z]+(.*)$/,"$1"),10):0}else if(typeof v.ActiveXObject!=l)try{var f=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");if(f&&(c=f.GetVariable("$version")))k=!0,c=c.split(" ")[1].split(","),e=[parseInt(c[0],10),parseInt(c[1],10),parseInt(c[2],10)]}catch(h){}return{w3:a,pv:e,wk:b,ie:k,win:g,mac:d}}();return{embedSWF:function(a,b,d,i,k,e,c,f,h){var j={success:!1,id:b};if(g.w3&&!(g.wk&&g.wk<312)&&
         a&&b&&d&&i&&k){d+="";i+="";var p={};if(f&&typeof f===o)for(var m in f)p[m]=f[m];p.data=a;p.width=d;p.height=i;a={};if(c&&typeof c===o)for(var n in c)a[n]=c[n];if(e&&typeof e===o)for(var r in e)typeof a.flashvars!=l?a.flashvars+="&"+r+"="+e[r]:a.flashvars=r+"="+e[r];if(t(k))b=s(p,a,b),j.success=!0,j.ref=b}h&&h(j)},ua:g,getFlashPlayerVersion:function(){return{major:g.pv[0],minor:g.pv[1],release:g.pv[2]}},hasFlashPlayerVersion:t,createSWF:function(a,b,d){if(g.w3)return s(a,b,d)},getQueryParamValue:function(a){var b=
         i.location.search||i.location.hash;if(b){/\?/.test(b)&&(b=b.split("?")[1]);if(a==null)return u(b);for(var b=b.split("&"),d=0;d<b.length;d++)if(b[d].substring(0,b[d].indexOf("="))==a)return u(b[d].substring(b[d].indexOf("=")+1))}return""}}}();
-
