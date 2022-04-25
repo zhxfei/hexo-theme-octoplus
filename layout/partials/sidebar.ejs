@@ -5,6 +5,7 @@
 
   <% if (is_home() || is_tag() || is_archive()) { %>
     <%-partial('partials/tag_cloud', {cur_tags: site.tags})%>
+
   <% } else if (is_post()) { %>
     <%-partial('partials/tag_cloud', {cur_tags: page.tags})%>
 
@@ -13,6 +14,9 @@
 
   <% } else if (is_category()) { %>
     <h2>category</h2>
+  <% } else { %> 
+    <%-partial('partials/sidebar-friends')%>
   <% } %>
+
 
 </aside>

@@ -6,6 +6,8 @@
     font-size: 100%;
     vertical-align: baseline
 }
+
+
 body{
   background-color: #CFCFCF;
 }
@@ -66,7 +68,7 @@ a:active {
 }
 
 html {
-    background: #252525 url('/images/blue-snow.webp?1416136272') top left
+    background: #E9F3FA url('/images/blue-snow.webp?1416136272') top left
 }
 
 body > div {
@@ -312,8 +314,10 @@ article blockquote cite:before {
 
 @media only screen and (min-width: 992px) {
     article blockquote {
+        font-size: 18px;
         padding-left: 1.5em;
-        border-left-width: 4px
+        border-left-width: 4px;
+        font-style: normal;
     }
 }
 
@@ -1434,7 +1438,12 @@ p code, li code {
     -o-border-radius: 0.4em;
     border-radius: 0.4em;
     padding: 0 .3em;
-    margin: -1px 0
+    margin: -1px 0;
+
+    color: #555;
+    background: #eee;
+    border-radius: 3px;
+    font-size: 13px;
 }
 
 p pre code, li pre code {
@@ -1928,11 +1937,13 @@ aside.sidebar a {
     -webkit-transition: color 0.5s;
     -moz-transition: color 0.5s;
     -o-transition: color 0.5s;
-    transition: color 0.5s
+    transition: color 0.5s;
+    text-decoration-line: none;
 }
 
 aside.sidebar:hover a:hover {
-    color: #0181eb
+    color: #0181eb;
+    font-size: 1.05em;
 }
 
 .aside-alt-link, #pinboard_linkroll .pin-tag {
@@ -2170,4 +2181,9 @@ pre code {
   line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px;
+}
+
+#forkme {
+  float: right;
+  margin: 0 0 0 0;
 }

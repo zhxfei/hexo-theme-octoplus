@@ -323,6 +323,12 @@ a.psn {
   font-size: 15px;
 }
 
+.sidebar-friends-title {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
 .tag_cloud-tags {
   text-align: center;
   font-size: 14px;
@@ -354,7 +360,6 @@ a.psn {
 .post-summary-content{
     font-size: 16px;
     padding-left: 20px;
-    text-decoration: none;
 }
 
 
@@ -372,3 +377,23 @@ aside.sidebar li {
 aside.sidebar li p:last-child {
     margin-bottom: 0
 }
+
+aside.sidebar img {
+  transition: all 1.0s;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /*Webkit (non-standard naming) */
+  image-rendering: crisp-edges; 
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+aside.sidebar img:hover{
+    transform: rotate(180deg);
+}
+
+
+.sidebar-friends-content{
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+

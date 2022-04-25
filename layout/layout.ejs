@@ -26,10 +26,28 @@ var thisYear = new Date().getFullYear();
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
 
     <link rel="canonical" href="<%=config.url + '/' + page.canonical_path.replace('index.html', '')%>">
+    <% if (theme.forkme) {%>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+    <% } %>
 
     <% if (theme.atom) {%>
         <link rel="alternate" href="<%=url_for('/atom.xml')%>" type="application/atom+xml">
     <% } %>
+
+    <% if (theme.baiduAnalytics) { %>
+      <script>
+        console.log('baidu ana')
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?<%=theme.baiduAnalytics%>";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+
+    <% } %>
+
 
     <% if (theme.googleAnalytics) { %>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -85,7 +103,7 @@ var thisYear = new Date().getFullYear();
       </p>
   </footer>
 
-  <% if (theme.scripts && theme.scripts.length) { %>
+  <% if (theme.scripts && theme.scripts.length !== 0) { %>
       <!-- scripts list from theme config.yml -->
       <% theme.scripts.forEach(function(url) { %>
           <script src="<%= url %>"></script>

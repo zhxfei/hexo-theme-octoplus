@@ -11,17 +11,16 @@ fork自[hexo-theme-octo](https://github.com/jbreckmckye/hexo-theme-octo)，在�
 
 
 ## 新特性
- - 修复sidebar关闭打开页面的bug
- - 调整文章渲染结构，支持代码高亮`tomorrow-theme`
- - 增加个人profile卡片
- - 增加标签云
- - 增加文章结构表，阅读时固定
+ - 修改sidebar关闭的行为，不在文章最后展示
+ - 调整文章渲染效果，支持代码高亮`tomorrow-theme`
+ - 重写sidebar, 增加个人profile卡片、标签云、文章结构表（阅读时固定）等功能
+ - header增加forkme展示功能
+ - 增加百度分析
 
 ## todo
 - [ ] 支持latex
 - [ ] 支持category 树状结构展示
 - [ ] 支持友情链接
-- [ ] 支持百度分析
 
 
 ## 效果
