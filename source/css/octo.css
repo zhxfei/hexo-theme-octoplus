@@ -21,13 +21,22 @@ ol, ul {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    text-align: center;
 }
 
-caption, th, td {
+caption, td {
     text-align: left;
     font-weight: normal;
     vertical-align: middle
+}
+
+th{
+    text-align: left;
+    font-weight: bold;
+    vertical-align: middle    
 }
 
 q, blockquote {
@@ -2187,3 +2196,13 @@ pre code {
   float: right;
   margin: 0 0 0 0;
 }
+
+[align=center]{
+    text-align: center;
+}
+
+
+#content {
+    background-color: white;
+}
+
